@@ -1,7 +1,7 @@
 import Ajv, { type ErrorObject, type JSONSchemaType } from "ajv";
 import React from "react";
-import type { FormErrors, ReactStateSetter } from "./types.ts";
-import useFirstUpdate from "../hooks/useFirstUpdate.ts";
+import { useFirstUpdate } from "../hooks/useFirstUpdate";
+import type { FormErrors, ReactStateSetter } from "./types";
 
 const ajv = new Ajv();
 
@@ -42,7 +42,7 @@ export type FormProps<T> = {
 /**
  * True React Form.
  */
-export default function Form<T>(props: FormProps<T>): React.ReactNode {
+export function Form<T>(props: FormProps<T>): React.ReactNode {
   const [value, setValue] = React.useState<T>(props.default || ({} as T));
   const [errors, setErrors] = React.useState<FormErrors<T>>({});
   const [submitted, setSubmitted] = React.useState<boolean>(false);
@@ -56,7 +56,7 @@ export default function Form<T>(props: FormProps<T>): React.ReactNode {
 
   const onValidate = async (data: T) => {
     let _data = data;
-    let newErrors: FormErrors<T> = {};
+    let newErrors: any = {};
 
     if (props.beforeValidation) _data = await props.beforeValidation(data);
     const isValid = validate(_data);

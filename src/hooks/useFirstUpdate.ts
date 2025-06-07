@@ -3,7 +3,7 @@ import React from "react";
 /**
  * Returns `true` when the component has not been updated.
  */
-export default function useFirstUpdate(): boolean {
+export function useFirstUpdate(): boolean {
   const firstRender = React.useRef<boolean>(true);
 
   React.useEffect(() => {

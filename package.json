@@ -1,8 +1,17 @@
 {
   "name": "react-true-form",
   "version": "1.0.0",
+  "author": {
+    "name": "Tomasz Kordiak",
+    "email": "dotomika@gmail.com"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
-    "dev": "vite",
+    "build": "tsup --config tsup.config.ts",
     "fix": "biome check --write --unsafe",
     "format": "biome format --write",
     "lint": "biome lint",
@@ -10,15 +19,16 @@
   },
   "dependencies": {
     "ajv": "^8.17.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "tsup": "^8.5.0"
+  },
+  "peerDependencies": {
+    "react": "^19",
+    "react-dom": "^19"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@types/react": "^19.1.4",
-    "@types/react-dom": "^19.1.5",
-    "@vitejs/plugin-react": "^4.4.1",
-    "typescript": "^5.8.3",
-    "vite": "^6.3.5"
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "5.8.3"
   }
 }

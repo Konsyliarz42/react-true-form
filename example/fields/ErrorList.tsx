@@ -1,5 +1,5 @@
 import type React from "react";
-import type { BaseFieldProps } from "../types.d.ts";
+import type { BaseFieldProps } from "../types";
 
 export type ErrorListProps = {
   errors?: BaseFieldProps["errors"];

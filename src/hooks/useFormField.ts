@@ -1,5 +1,5 @@
 import React from "react";
-import useForm from "./useForm.ts";
+import { useForm } from "./useForm";
 
 type FieldState<T> = {
   value: T | undefined;
@@ -12,7 +12,7 @@ type FieldState<T> = {
 /**
  * Controller of the form field.
  */
-export default function useFormField<T, K extends keyof T>(name: K): FieldState<T[K]> {
+export function useFormField<T, K extends keyof T>(name: K): FieldState<T[K]> {
   const context = useForm<T>();
 
   const [value, errors] = React.useMemo(

@@ -1,8 +1,7 @@
 import type { JSONSchemaType } from "ajv";
 import React from "react";
-import Form from "../components/Form.tsx";
-import useFormField from "../hooks/useFormField.ts";
-import TextField from "./fields/TextField/index.tsx";
+import TextField from "./fields/TextField/index";
+import { Form, useFormField } from "../src";
 
 interface TestForm {
   text: string;
@@ -16,7 +15,7 @@ export default function App(): React.ReactNode {
   const schema: JSONSchemaType<TestForm> = {
     type: "object",
     properties: {
-      text: { type: "string", const: "dupa" },
+      text: { type: "string", const: "testText" },
     },
     required: [],
   };
@@ -42,12 +41,12 @@ function FormFields(): React.ReactNode {
   return (
     <>
       <TextField
-        description="Simplest input."
-        value={textField.value}
-        errors={textField.errors}
         label="Text"
-        placeholder="Example text"
+        value={textField.value}
         onChange={textField.setValue}
+        placeholder="Example text"
+        description="Simplest input."
+        errors={textField.errors}
       />
     </>
   );

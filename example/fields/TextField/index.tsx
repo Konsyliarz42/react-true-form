@@ -1,9 +1,9 @@
 import React from "react";
 import "./index.css";
-import type { BaseFieldProps } from "../../types.d.ts";
-import Description from "../Description.tsx";
-import ErrorList from "../ErrorList.tsx";
-import Label from "../Label.tsx";
+import type { BaseFieldProps } from "../../types";
+import Description from "../Description";
+import ErrorList from "../ErrorList";
+import Label from "../Label";
 
 export type TextFieldProps = BaseFieldProps<string, HTMLInputElement> & {
   placeholder?: string;

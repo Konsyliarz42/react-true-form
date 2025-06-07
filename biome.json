@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": []
+    "ignore": ["dist"]
   },
   "formatter": {
     "enabled": true,
@@ -21,13 +21,18 @@
     "enabled": true,
     "rules": {
       "all": true,
-      "style": {
-        "useBlockStatements": "off",
-        "noDefaultExport": "off",
-        "noImplicitBoolean": "off"
-      },
       "correctness": {
-        "useExhaustiveDependencies": "off"
+        "useExhaustiveDependencies": "off",
+        "useImportExtensions": "off"
+      },
+      "performance": {
+        "noBarrelFile": "off",
+        "noReExportAll": "off"
+      },
+      "style": {
+        "noDefaultExport": "off",
+        "noImplicitBoolean": "off",
+        "useBlockStatements": "off"
       },
       "suspicious": {
         "noExplicitAny": "off",
