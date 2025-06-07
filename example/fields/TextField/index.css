@@ -1,0 +1,55 @@
+.field {
+  display: block;
+}
+
+.field-label {
+  display: inherit;
+  font-size: small;
+}
+
+.field-input {
+  display: inherit;
+  background-color: transparent;
+  border: solid 2px #808080;
+  border-radius: 4px;
+  padding: 8px;
+  color: inherit;
+  font-size: medium;
+}
+
+.field-description {
+  display: inherit;
+  font-size: small;
+  color: #808080;
+}
+
+.field-errors {
+  display: inherit;
+  font-size: small;
+  margin: 0;
+  padding: 0 0 0 1em;
+}
+.field-errors-item {
+  display: inherit;
+  font-size: inherit;
+}
+
+.field.disabled > .field-label,
+.field.disabled > .field-input,
+.field.disabled > .field-description,
+.field.disabled > .field-errors {
+  opacity: 0.5;
+}
+.field.disabled > .field-input {
+  cursor: not-allowed;
+}
+
+.field.error > .field-input,
+.field.error > .field-errors {
+  color: #c08080;
+  border-color: #c06080;
+}
+
+.field.required > .field-label::after {
+  content: " *";
+}
