@@ -20,7 +20,7 @@ Hooks:
 
 ### Example
 
-See [example app](example\App.tsx).
+See [example app](example/App.tsx).
 
 Or download repo and run this command:
 
