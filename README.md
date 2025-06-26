@@ -103,4 +103,4 @@ Form component to manage and validate data based on [Ajv JSON schema validator](
 
 ## Form props
 
-Check [FormProps type](src\components\Form.tsx) for full list of props.
+Check [FormProps type](src/components/Form.tsx) for full list of props.
